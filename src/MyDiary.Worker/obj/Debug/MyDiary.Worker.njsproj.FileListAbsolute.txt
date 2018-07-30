@@ -1,1 +1,3 @@
 F:\MyProjects\02 PITS\GIT\MyDiary.Worker\MyDiary.Worker\bin\Microsoft.NodejsTools.WebRole.dll
+F:\MyProjects\02 PITS\GIT\MyDiary.Worker\mydiary.worker\src\MyDiary.Worker\obj\Debug\MyDiary.Worker.njsprojResolveAssemblyReference.cache
+F:\MyProjects\02 PITS\GIT\MyDiary.Worker\mydiary.worker\src\MyDiary.Worker\bin\Microsoft.NodejsTools.WebRole.dll
