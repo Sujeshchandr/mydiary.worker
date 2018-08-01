@@ -1,1 +1,1 @@
-# mydiary.worker
+# Mydiary.Worker
