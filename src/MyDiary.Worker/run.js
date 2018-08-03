@@ -46,6 +46,6 @@ const setup = async () => {
     console.log("starting process ...");
     await startProcess("loan_process");
     console.log("process started");
-}; 
+};
 
 setup();
