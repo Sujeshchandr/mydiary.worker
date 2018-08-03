@@ -1,5 +1,11 @@
 const { Client, logger } = require('camunda-external-task-client-js');
 
+const fs = require("fs");
+const path = require("path");
+const got = require("got");
+const FormData = require("form-data");
+const { startCamunda } = require("run-camunda/camunda");
+
 // configuration for the Client:
 //  - 'baseUrl': url to the Process Engine
 //  - 'logger': utility to automatically log important events
@@ -24,7 +30,7 @@ client.subscribe('TOPIC-TASK-1', async function({ task, taskService }) {
   console.log(`Charging credit card with an amount of ${amount}€ for the item '${item}'...`);
 
   // Unlocks an external task by id. Clears the task’s lock expiration time and worker id.
-  //await taskService.lock(task);
+  //await taskService.unlock(task);
 
   // Complete the task
   await taskService.complete(task);
@@ -43,3 +49,4 @@ client.subscribe('TOPIC-TASK-2', async function ({ task, taskService }) {
     // Complete the task
     await taskService.complete(task);
 });
+
