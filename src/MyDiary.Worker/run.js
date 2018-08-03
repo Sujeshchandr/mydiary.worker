@@ -7,13 +7,13 @@ const { startCamunda } = require("run-camunda/camunda");
 const deploy = async (filePath) => {
 
     // constants
-    const DEPLOYMENT_NAME = "TEST_PROCESS_LOANS";
+    const DEPLOYMENT_NAME = path.basename(filePath);
     const URL = "http://localhost:8080/engine-rest/deployment/create";
 
     // create form and deploy
     const form = new FormData();
-    form.append("deployment-name", path.basename(filePath));
-    form.append(path.basename(filePath), fs.createReadStream(filePath));
+    form.append("deployment-name", DEPLOYMENT_NAME);
+    form.append(DEPLOYMENT_NAME, fs.createReadStream(filePath));
     try {
         await got.post(URL, { body: form });
     } catch (e) {
